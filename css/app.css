@@ -1,0 +1,270 @@
+@import url('./default.css');
+
+body {
+    background-color: var(--main-background);
+}
+
+header {
+    width: 100%;
+    margin: 40px 0px;
+    display: none;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-gray);
+    border-radius: 12px;
+}
+
+header ul {
+    display: flex;
+    margin: 0 auto;
+    max-width: 800px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 12px 30px;
+
+}
+
+header ul li {
+    margin: 10px 15px;
+    text-transform: uppercase;
+}
+
+header ul a {
+    padding: 10px;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--color-yellow);
+}
+
+.home {
+    background-color: var(--color-gray);
+}
+
+.my {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 830px;
+    margin: 0 auto;
+
+}
+
+.my .name {
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--color-yellow);
+    margin: -5px 0px 10px 0px;
+}
+
+@keyframes anim-blink {
+    to {
+        opacity: 1;
+    }
+}
+
+.my .name .blink {
+    color: var(--color-yellow);
+    opacity: 0;
+    animation-name: anim-blink;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.home .buttons {
+    margin: 35px 0px;
+}
+
+.button {
+    background-color: var(--color-yellow);
+    color: black;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 10px 40px;
+    font-size: 1.1em;
+}
+
+.button:hover {
+    background-color: #ccac2a;
+    transition: all 0.3s ease 0s
+}
+
+.home .buttons .button:first-child {
+    margin-right: 15px;
+}
+
+
+.home .social-medias {
+    display: flex;
+}
+
+.home .social-medias .sm-icon {
+    margin: 0px 5px;
+    background-color: var(--main-background);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.home .social-medias .sm-icon:first-child {
+    margin-left: 0;
+}
+
+.home .social-medias .sm-icon i {
+    color: var(--color-yellow);
+}
+
+
+.about {
+    display: flex;
+    gap: 18px;
+    justify-content: flex-start;
+    padding: 0 0 !important;
+    flex-wrap: wrap;
+}
+
+.about .me {
+    background-color: var(--color-gray);
+    flex: 1 1 450px;
+    height: min-content;
+}
+
+.about .me h2,
+.projects h2,
+.about .skills h2 {
+    color: var(--color-yellow);
+    font-weight: 600;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about .skills {
+    background-color: var(--color-gray);
+    flex: 1 1 300px;
+    height: min-content;
+}
+
+.about .skills-c {
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.about .skills-c-column {
+    flex: 1 1 50%;
+}
+
+.about .skills .skill-c-type {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .skills .skill-icons {
+    display: flex;
+    column-gap: 8px;
+    row-gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -5px;
+}
+
+.about .skills .skill-icons img {
+    display: block;
+    max-width: 50px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+.about .skills .skill-icons img:hover {
+    transition: 0.3s ease;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.c-projects {
+    background-color: var(--color-gray);
+}
+
+.projects {
+    margin: 0 auto;
+    max-width: 830px;
+}
+
+.projects .category-options {
+    display: flex;
+}
+
+.projects .category-options .c {
+    border: 1px solid var(--main-background);
+    box-shadow: -3px 3px 8px var(--main-background);
+    color: var(--color-yellow);
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.category-options .c.selected{
+    background-color: var(--main-background);
+    transition: 0.2s;
+    border: 1px solid var(--color-yellow);
+}
+
+.projects .category-options .c:first-child {
+    margin: 0;
+}
+
+.container .row {
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--main-background);
+    margin: 30px 0px;
+}
+
+
+.projects .items {
+    display: flex;
+    row-gap: 12px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-item {
+    background-color: var(--main-background);
+    border-radius: 4px;
+    padding: 25px 20px;
+}
+
+.project-item .name {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--color-yellow);
+}
+
+.project-item img {
+    display: block;
+    margin: 15px 0px;
+    height: 380px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-item .buttons {
+    margin-top: 20px;
+    column-gap: 20px;
+    display: flex;
+}
+
+.project-item .button {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
