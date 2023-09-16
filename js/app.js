@@ -7,7 +7,7 @@ document.querySelectorAll('.category-options .c').forEach(category => {
             .forEach(category => category.classList.remove('selected'));
 
         e.currentTarget.classList.add('selected');
-        
+
         showProjects(e.currentTarget.id);
     });
 });
@@ -23,10 +23,10 @@ function buildProjectView(data) {
     const pItem = document.querySelector('.models .project-item').cloneNode(true);
 
     pItem.querySelector('.name').innerText = data.name;
-    
+
     if (!data.image) pItem.querySelector('img').remove();
     else pItem.querySelector('img').src = data.image;
-    
+
     pItem.querySelector('.info').innerText = data.about;
     pItem.querySelector('#viewCode').href = data.repository;
 

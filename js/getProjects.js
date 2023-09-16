@@ -1,4 +1,4 @@
-export default function getProjects(category, qt){
+export default function getProjects(category, qt) {
 
     return projects[category];
 }
@@ -9,7 +9,7 @@ function createProject(name, about, image, repository, url, techs) {
     }
 }
 
-const projects = {
+const projects = {  
     frontend: [
         createProject(
             "Gerador de Senhas",
