@@ -105,7 +105,7 @@ header ul a {
     display: flex;
 }
 
-.home .social-medias .sm-icon {
+.home .social-medias .sm-icon a{
     margin: 0px 5px;
     background-color: var(--main-background);
     padding: 5px 10px;
@@ -202,6 +202,8 @@ header ul a {
 
 .projects .category-options {
     display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .projects .category-options .c {
@@ -212,7 +214,6 @@ header ul a {
     padding: 6px 12px;
     cursor: pointer;
     font-weight: 600;
-    margin: 0 10px;
 }
 
 .category-options .c.selected{
@@ -221,9 +222,7 @@ header ul a {
     border: 1px solid var(--color-yellow);
 }
 
-.projects .category-options .c:first-child {
-    margin: 0;
-}
+
 
 .container .row {
     width: 100%;
