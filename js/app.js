@@ -33,6 +33,12 @@ function buildProjectView(data) {
     if (!data.url) pItem.querySelector('#access').remove();
     else pItem.querySelector('#access').href = data.url;
 
+    data.techs.forEach(tech=>{
+        let techItem = document.createElement('span');
+        techItem.innerText = tech;
+        pItem.querySelector('.techs').append(techItem);
+    });
+    
     return pItem;
 }
 

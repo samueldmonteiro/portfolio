@@ -26,4 +26,14 @@
     .project-item .buttons {
         justify-content: center;
     }
+
+    .project-footer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .project-footer .techs {
+        align-self: flex-start;
+        margin: 10px 0px;
+    }
 }

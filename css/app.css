@@ -261,6 +261,11 @@ header ul a {
     object-fit: cover;
 }
 
+.project-item .project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .project-item .buttons {
     margin-top: 20px;
@@ -272,4 +277,14 @@ header ul a {
 .project-item .button {
     font-size: 0.8em;
     text-transform: uppercase;
+}
+
+
+.project-item .techs span{
+    font-size: 0.8em;
+    margin-right: 15px;
+}
+
+.project-item .techs span:last-child{
+    margin-right: 10px;
 }
