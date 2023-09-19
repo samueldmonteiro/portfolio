@@ -12,7 +12,7 @@
     }
 
     .home .buttons a:first-child {
-        margin-left: 10px;
+        margin-left: 13px;
     }
 
     .about .skills .skill-c-type {
@@ -36,4 +36,10 @@
         align-self: flex-start;
         margin: 10px 0px;
     }
+
+    .my .name{
+        font-size: 45px !important;
+        margin: -1px 0px 10px 0px !important;
+    } 
 }
+
