@@ -63,7 +63,7 @@ const Header = () => {
             <li className="header__sm-menu-link"><a href="./">Home</a></li>
             <li className="header__sm-menu-link"><a href="./#about">Sobre</a></li>
             <li className="header__sm-menu-link"><a href="./#projects">Projetos</a></li>
-            <li className="header__sm-menu-link"><a href="./#contact">Contato</a></li>
+            <li className="header__sm-menu-link"><a href="./#footer">Contato</a></li>
           </ul>
         </div>
       </div>
