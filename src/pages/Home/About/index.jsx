@@ -9,14 +9,13 @@ const About = () => {
             <h3 className="about__content-title">Quem sou eu!</h3>
             <div className="about__content-details">
               <p className="about__content-details-para">
-                Me chamo Samuel, sou desenvolvedor full-stack, com foco em desenvolvimento de aplicações
-                web, APIs e software. Há 1 ano, venho criando soluções reais e úteis para pessoas e
-                empresas, atuando como freelancer.
+                Me chamo Samuel, sou desenvolvedor web/software, com foco em desenvolvimento de sistemas completos, sites e
+                API's RESTful . Há 1 ano, venho criando soluções reais e úteis para pessoas e
+                empresas.
               </p>
 
               <p className="about__content-details-para">
-                Minha trajetória é marcada pela habilidade em resolver problemas e desenvolver soluções
-                práticas que atendem às necessidades dos clientes.
+              Minha trajetória é marcada pela capacidade de resolver problemas de forma estratégica, desenvolvendo soluções que realmente atendem às necessidades dos clientes. Estou sempre em busca de aprimoramento e inovação para entregar resultados cada vez melhores.
               </p>
 
             </div>

@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="home-hero__cta">
-          <a href="./#projects" className="btn btn--bg">Mais...</a>
+          <a href="./#about" className="btn btn--bg">Mais...</a>
         </div>
       </div>
       <div className="home-hero__socials">

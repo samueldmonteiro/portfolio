@@ -222,8 +222,8 @@ textarea {
 }
 
 .btn--med {
-  padding: 1.5rem 5rem;
-  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
 }
 
 .btn--theme {
@@ -422,7 +422,7 @@ textarea {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-gap: 5rem;
-  margin-bottom: 11rem;
+  margin-bottom: 6rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -445,6 +445,8 @@ textarea {
 
 .projects__row-img-cont {
   overflow: hidden;
+  max-width: 650px;
+  margin-top: 30px;
 }
 
 .projects__row-img {
@@ -1018,7 +1020,7 @@ textarea {
 }
 
 .skills__skill {
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.6rem;
   margin-bottom: 1.5rem;
   margin-right: 1.5rem;
   font-size: 1.6rem;
@@ -1031,7 +1033,7 @@ textarea {
 }
 
 .skills__skill i {
-  font-size: 4rem;
+  font-size: 2.7rem;
   margin-right: 15px;
 }
 
@@ -1041,6 +1043,7 @@ textarea {
   margin: 0px 0px 10px 0px;
   width: 100%;
   justify-content: flex-start;
+  margin-top: -10px;
 }
 
 .project-skills .skills__skill {
