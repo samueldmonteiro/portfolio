@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Grid, Button, Card, CardContent, Typography, ButtonGroup } from '@mui/material';
+import { Container, Grid, Button, Typography, ButtonGroup } from '@mui/material';
 import ProjectItem from './ProjectItem';
 
 import PImage1 from "../../../assets/images/projects/1.png";
@@ -9,12 +9,35 @@ import PImage6 from "../../../assets/images/projects/6.png";
 import PImage5 from "../../../assets/images/projects/5.png";
 import PImage7b from "../../../assets/images/projects/7b.png";
 import PImage8 from "../../../assets/images/projects/8.png";
+import PImage9 from "../../../assets/images/projects/9.png";
+import PImage10 from "../../../assets/images/projects/10.png";
+
+
 
 const projects = [
+
+  {
+    image: PImage9,
+    title: 'Sistema de Rastreamento Veicular Multiempresas',
+    text: 'Painel administrativo completo para empresas de rastreamento veicular. Permite o gerenciamento de múltiplas empresas, com controle de equipamentos, técnicos e clientes. Inclui módulo financeiro para gestão de tráfego pago, gráficos analíticos e relatórios detalhados. Ideal para empresas que precisam de controle e escalabilidade em suas operações.',
+    tags: ['PHP', 'Symfony', 'ReactJS', 'Docker', 'Python', 'MySQL'],
+    accessLink: 'https://jmtrack.com', // substitua pelo real
+    category: 'Full-stack',
+  },
+
+  {
+    image: PImage10,
+    title: 'Gestão de Frota e Contratos de Aluguel',
+    text: 'Sistema desenvolvido para empresas de aluguel de motos, com gerenciamento completo de veículos, contratos, locatários e manutenção. Inclui geração de relatórios, gráficos de desempenho e visão financeira. A plataforma oferece uma experiência intuitiva tanto para operadores quanto para administradores, otimizando a operação do negócio.',
+    tags: ['PHP', 'Laravel', 'ReactJS', 'Python', 'Docker', 'MySQL'],
+    accessLink: 'https://frotaintegrada.com.br', // substitua pelo real
+    category: 'Full-stack',
+  },
+
   {
     image: PImage6,
     title: 'Painel Administrativo Completo',
-    text: 'Painel administrativo completo para a gestão e controle financeiro de igrejas. Com ele, é possível registrar e acompanhar dízimos, ofertas e despesas de forma organizada, além de gerenciar membros e congregações de maneira eficiente. O sistema também conta com um painel intuitivo para a administração monitorar o fluxo de caixa, gerar relatórios detalhados e garantir total transparência na gestão financeira da igreja.',
+    text: 'Painel administrativo completo para a gestão e controle financeiro de igrejas. Com ele, é possível registrar e acompanhar dízimos, ofertas de forma organizada, além de gerenciar membros e congregações de maneira eficiente. O sistema também conta com um painel intuitivo para a administração monitorar o fluxo de caixa, gerar relatórios detalhados e garantir total transparência na gestão financeira da igreja.',
     tags: ['PHP', 'Symfony', 'ReactJS', 'Docker'],
     accessLink: 'https://adcampodaponte.site/',
     codeLink: 'https://github.com/samueldmonteiro/sistema-gestao-igreja',

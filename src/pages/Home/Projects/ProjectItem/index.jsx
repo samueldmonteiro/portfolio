@@ -1,6 +1,6 @@
-import React from 'react'
 
 const ProjectItem = ({ project }) => {
+  
   return (
     <div key={project.title} className="projects__row">
       <div className="projects__row-img-cont">
@@ -32,4 +32,4 @@ const ProjectItem = ({ project }) => {
   )
 }
 
-export default ProjectItem
+export default ProjectItem;
