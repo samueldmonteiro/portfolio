@@ -49,6 +49,16 @@ const About = () => {
                 </div>
 
                 <div className="skills__skill">
+                  <i className="devicon-typescript-plain colored"></i>
+                  Typescript
+                </div>
+
+                 <div className="skills__skill">
+                  <i className="devicon-tailwindcss-plain colored"></i>
+                  TailwinCSS
+                </div>
+
+                <div className="skills__skill">
                   <i className="devicon-sass-original colored"></i>
                   Sass
                 </div>
