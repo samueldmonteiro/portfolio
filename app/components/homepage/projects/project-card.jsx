@@ -15,7 +15,7 @@ const ProjectCard = ({ project, index }) => {
       <div className="absolute inset-0 bg-gradient-to-r from-violet-600/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       {/* Imagem do projeto */}
-      <div className="relative h-50 lg:h-70 overflow-hidden">
+      <div className="relative h-40 lg:h-70 overflow-hidden">
         <Image
           src={project.image || placeholder}
           alt={project.name}

@@ -15,5 +15,5 @@ Atuo como desenvolvedor autônomo, acumulando experiência prática e versátil.
   stackOverflow: "https://stackoverflow.com/users/16840768/abu-said",
   leetcode: "https://leetcode.com/said3812/",
   devUsername: "samueldmonteiro",
-  resume: "https://drive.google.com/file/d/1KiXI3b-3d9ZuRa-VtuM3pd6lq35uAoC2/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1Ynauy8liP8OEA2eaUGwuD-19yA3P-d7d/view?usp=sharing"
 };
