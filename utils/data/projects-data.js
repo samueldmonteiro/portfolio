@@ -17,7 +17,6 @@ export const projectsData = [
     role: "Full Stack Developer",
     image: "/image/minhasala1.png",
     demo: "https://minhasala.pro",
-    featured: true
   }
 
 ];
