@@ -8,14 +8,23 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      // Previne scroll do conteúdo de fundo
+      document.documentElement.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflow = 'unset';
     }
 
     return () => {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflow = 'unset';
     };
   }, [isOpen]);
+
+  // Previne que o clique dentro do modal feche ele
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  };
 
   if (!project) return null;
 
@@ -23,25 +32,26 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
   return (
     <>
-      {/* Overlay */}
+      {/* Overlay - Aumentei o z-index */}
       <div 
-        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-50 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={onClose}
       />
       
-      {/* Modal Slide */}
+      {/* Modal - Aumentei o z-index e adicionei stopPropagation */}
       <div 
-        className={`fixed right-0 top-0 h-full w-full lg:w-1/2 xl:w-2/5 bg-gradient-to-b from-[#0d1224] to-[#0a0d37] z-50 shadow-2xl border-l border-[#1b2c68a0] transition-transform duration-300 ${
+        className={`fixed right-0 top-0 h-full w-full lg:w-1/2 xl:w-2/5 bg-gradient-to-b from-[#0d1224] to-[#0a0d37] z-[101] shadow-2xl border-l border-[#1b2c68a0] transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        onClick={handleModalClick}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-[#1b2c68a0]">
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors duration-200 p-2 hover:bg-white/10 rounded-lg"
+            className="text-gray-400 hover:text-white transition-colors duration-200 p-2 hover:bg-white/10 rounded-lg z-[102]"
           >
             <FaTimes className="text-xl" />
           </button>
@@ -58,6 +68,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               alt={project.name}
               fill
               className="object-cover"
+              priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0d1224] via-transparent to-transparent"></div>
           </div>
