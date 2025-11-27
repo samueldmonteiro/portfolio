@@ -114,15 +114,16 @@ function HeroSection() {
 
               <div className="ml-12 lg:ml-24">
                 <span className="text-gray-400">{" ["}</span>
-                <span className="text-amber-300">"JavaScript"</span>
-                <span className="text-gray-400">, </span>
                 <span className="text-amber-300">"TypeScript"</span>
                 <span className="text-gray-400">, </span>
-                <span className="text-amber-300">"React"</span>
-                <span className="text-gray-400">, </span>
                 <span className="text-amber-300">"NextJS"</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">"ReactJS"</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">"Javascript"</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">"TailwindCSS"</span>
                 <span className="text-gray-400">{"],"}</span>
-
               </div>
 
               <div className="ml-8 lg:ml-16">
@@ -136,18 +137,33 @@ function HeroSection() {
               <div className="ml-12 lg:ml-24">
                 <span className="text-gray-400">{" ["}</span>
                 <span className="text-amber-300">"NestJS"</span>
+                 <span className="text-gray-400">, </span>
+                <span className="text-amber-300">"Express"</span>
                 <span className="text-gray-400">, </span>
                 <span className="text-amber-300">"PHP"</span>
                 <span className="text-gray-400">, </span>
                 <span className="text-amber-300">"Laravel"</span>
                 <span className="text-gray-400">, </span>
                 <span className="text-amber-300">"Symfony"</span>
-                <span className="text-gray-400">, </span>
+                <span className="text-gray-400">{"],"}</span>
+              </div>
+
+              <div className="ml-8 lg:ml-16">
+              </div>
+
+              {/* BANCO DE DADOS */}
+              <div className="ml-8 lg:ml-16 mr-2">
+                <span className="text-white">database:</span>
+              </div>
+
+              <div className="ml-12 lg:ml-24">
+                <span className="text-gray-400">{" ["}</span>
                 <span className="text-amber-300">"MySQL"</span>
                 <span className="text-gray-400">, </span>
-                <span className="text-amber-300">"PSQL"</span>
+                <span className="text-amber-300">"PostgreSQL"</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">"Redis"</span>
                 <span className="text-gray-400">{"],"}</span>
-
               </div>
 
               <div className="ml-8 lg:ml-16">
@@ -160,15 +176,12 @@ function HeroSection() {
 
               <div className="ml-12 lg:ml-24">
                 <span className="text-gray-400">{" ["}</span>
-
                 <span className="text-amber-300">"Docker"</span>
                 <span className="text-gray-400">{"]"}</span>
-
               </div>
 
               <div className="ml-8 lg:ml-16">
               </div>
-
               {/* CLOSE SKILLS */}
               <div className="ml-4 lg:ml-8 mr-2">
                 <span className="text-gray-400">{"},"}</span>
@@ -177,12 +190,6 @@ function HeroSection() {
               {/* FEATURES */}
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
-              </div>
-
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
                 <span className="text-orange-400">true</span>
                 <span className="text-gray-400">,</span>
               </div>
