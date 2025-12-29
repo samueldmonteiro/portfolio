@@ -9,6 +9,7 @@ export const projectsData = [
     image: "/image/frota3.png",
     demo: "https://frotaintegrada.com.br",
   },
+  
   {
     id: 2,
     name: "Minha Sala — Ensalamento",
@@ -17,6 +18,15 @@ export const projectsData = [
     role: "Full Stack Developer",
     image: "/image/minhasala1.png",
     demo: "https://minhasala.pro",
+  },
+  {
+    id: 3,
+    name: "Crachá Pro",
+    description: "Software de geração automatizada de crachás, e gerenciamento completo através de painel administrativo.",
+    tools: ["NextJS", "TailwindCSS", "Prisma ORM", "Docker"],
+    role: "Full Stack",
+    image: "/image/id.png",
+    demo: "https://id-generator-xi.vercel.app",
   }
 
 ];

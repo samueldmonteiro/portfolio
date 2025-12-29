@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import { FaTimes, FaGithub, FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import placeholder from '@/public/png/placeholder.png';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   useEffect(() => {
@@ -64,7 +63,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           {/* Imagem principal */}
           <div className="relative h-60 lg:h-80">
             <Image
-              src={project.image || placeholder}
+              src={project.image}
               alt={project.name}
               fill
               className="object-cover"

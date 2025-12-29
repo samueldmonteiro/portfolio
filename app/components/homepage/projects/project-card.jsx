@@ -1,7 +1,6 @@
 // components/projects/project-card.jsx
 import Image from 'next/image';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import placeholder from '@/public/png/placeholder.png';
 
 const ProjectCard = ({ project, index }) => {
   const hasCode = project.code !== null;
@@ -17,7 +16,7 @@ const ProjectCard = ({ project, index }) => {
       {/* Imagem do projeto */}
       <div className="relative h-40 lg:h-70 overflow-hidden">
         <Image
-          src={project.image || placeholder}
+          src={project.image}
           alt={project.name}
           fill
           className="

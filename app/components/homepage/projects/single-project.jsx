@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaCode, FaPlay } from 'react-icons/fa';
-import placeholder from '/public/png/placeholder.png';
 
 const SingleProject = ({ project }) => {
   const { name, description, tags, code, demo, image, features } = project;
@@ -41,7 +40,7 @@ const SingleProject = ({ project }) => {
         </h2>
         <div className="p-6">
           <Image
-            src={image ? image?.src : placeholder}
+            src={image ?? image?.src}
             alt={name}
             width={1080}
             height={720}
