@@ -9,19 +9,12 @@ import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 
 function ContactSection() {
-  // Dados dos contatos organizados
   const contactItems = [
     {
       icon: MdAlternateEmail,
       href: `mailto:${personalData.email}`,
       label: personalData.email,
       type: 'email'
-    },
-    {
-      icon: IoMdCall,
-      href: `tel:${personalData.phone}`,
-      label: personalData.phone,
-      type: 'phone'
     },
     {
       icon: FaWhatsapp,
@@ -179,23 +172,6 @@ function ContactSection() {
                     );
                   })}
                 </div>
-              </div>
-
-              {/* CTA Adicional */}
-              <div className="bg-gradient-to-br from-cyan-500/10 to-purple-600/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/20 text-center">
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  Pronto para começar?
-                </h4>
-                <p className="text-cyan-200 mb-4">
-                  Vamos transformar suas ideias em realidade
-                </p>
-                <a 
-                  href={`mailto:${personalData.email}`}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
-                >
-                  <MdAlternateEmail size={20} />
-                  Enviar Email
-                </a>
               </div>
             </div>
           </div>
