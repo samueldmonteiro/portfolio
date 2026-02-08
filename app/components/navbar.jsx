@@ -35,7 +35,7 @@ function Navbar() {
 
   const menuItems = [
     { href: "/#about", label: "SOBRE" },
-    { href: "/#projects", label: "PROJETOS" },
+    { href: "/portfolio", label: "PROJETOS" },
     { href: "/#experience", label: "EXPERIÊNCIA" },
     { href: "/#skills", label: "SKILLS" },
     { href: "/#education", label: "FORMAÇÃO" },
