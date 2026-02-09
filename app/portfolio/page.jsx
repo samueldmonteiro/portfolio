@@ -47,10 +47,11 @@ const PortfolioPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto">
             {[
-              { number: '3', label: 'Projetos Entregues' },
-              { number: '3', label: 'Clientes Satisfeitos' },
-              { number: '100%', label: 'Taxa de Sucesso' },
-              { number: '1', label: 'Ano de Mercado' },
+              { number: '3+', label: 'Projetos Entregues com Sucesso' },
+              { number: '3+', label: 'Clientes Atendidos' },
+              { number: '100%', label: 'Satisfação dos Clientes' },
+              { number: '100%', label: 'Compromisso com Entrega' },
+
             ].map((stat, idx) => (
               <div key={idx} className="p-3 md:p-4 rounded-xl md:rounded-2xl bg-gradient-to-br from-violet-950/30 to-purple-950/30 border border-violet-500/10 backdrop-blur-sm">
                 <div className="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-br from-violet-400 to-purple-400 bg-clip-text text-transparent mb-1">
