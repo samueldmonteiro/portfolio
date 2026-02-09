@@ -338,7 +338,7 @@ const ProjectModal = ({ project, onClose }) => {
       className="fixed inset-0 z-50 flex items-center justify-center p-2 md:p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
       onClick={handleBackdropClick}
     >
-      <div className="relative w-full max-w-5xl max-h-[95vh] md:max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#1a1443] to-[#0d1224] rounded-lg md:rounded-[5px] border border-violet-500/20 shadow-2xl shadow-violet-500/20 scrollbar-thin scrollbar-thumb-violet-500/50 scrollbar-track-transparent">
+      <div className="relative w-full max-w-4xl max-h-[95vh] md:max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#1a1443] to-[#0d1224] rounded-lg md:rounded-[5px] border border-violet-500/20 shadow-2xl shadow-violet-500/20 scrollbar-thin scrollbar-thumb-violet-500/50 scrollbar-track-transparent">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -349,7 +349,7 @@ const ProjectModal = ({ project, onClose }) => {
 
         {/* Header Image Carousel */}
         <div className="relative w-full aspect-video overflow-hidden rounded-t-lg md:rounded-t-[5px] group/carousel bg-gradient-to-br from-violet-950/20 to-purple-950/20">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0d1224] via-transparent to-transparent z-10"></div>
+          {/**<div className="absolute inset-0 bg-gradient-to-t from-[#0d1224] via-transparent to-transparent z-10"></div>**/}
 
           <Image
             src={images[currentImageIndex]}
