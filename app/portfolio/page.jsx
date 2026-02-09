@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { projectsData } from '@/utils/data/projects-data';
 import Image from 'next/image';
-import { FiArrowRight, FiAward, FiTrendingUp, FiX, FiExternalLink, FiCheck } from 'react-icons/fi';
+import { FiArrowRight, FiTrendingUp, FiX, FiExternalLink, FiCheck } from 'react-icons/fi';
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -50,7 +50,7 @@ const PortfolioPage = () => {
               { number: '3', label: 'Projetos Entregues' },
               { number: '3', label: 'Clientes Satisfeitos' },
               { number: '100%', label: 'Taxa de Sucesso' },
-              { number: '24/7', label: 'Suporte Dedicado' }
+              { number: '1', label: 'Ano de Mercado' },
             ].map((stat, idx) => (
               <div key={idx} className="p-3 md:p-4 rounded-xl md:rounded-2xl bg-gradient-to-br from-violet-950/30 to-purple-950/30 border border-violet-500/10 backdrop-blur-sm">
                 <div className="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-br from-violet-400 to-purple-400 bg-clip-text text-transparent mb-1">
@@ -129,18 +129,13 @@ const PortfolioPage = () => {
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-stretch sm:items-center px-2">
             <a
-              href="/#contact"
+              href="https://wa.me/5598970051778?text=Olá!%20Quero%20iniciar%20um%20novo%20projeto!"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 rounded-full text-white font-bold text-sm md:text-base transition-all duration-300 shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:scale-105 flex items-center justify-center gap-2 md:gap-3"
             >
               Iniciar Projeto
               <FiArrowRight className="text-base md:text-lg group-hover:translate-x-1 transition-transform" />
-            </a>
-
-            <a
-              href="#portfolio"
-              className="px-6 md:px-8 py-3 md:py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-white font-bold text-sm md:text-base transition-all duration-300 backdrop-blur-sm text-center"
-            >
-              Ver Mais Projetos
             </a>
           </div>
         </div>
@@ -190,14 +185,14 @@ const ProjectShowcase = ({ project, index, onActivate, onDeactivate, onOpenModal
       onMouseLeave={onDeactivate}
     >
       {/* Image with Overlay */}
-      <div className="relative h-[240px] sm:h-[280px] md:h-[320px] lg:h-[280px] overflow-hidden cursor-pointer group/image" onClick={onOpenModal}>
+      <div className="relative w-full aspect-video overflow-hidden cursor-pointer group/image bg-gradient-to-br from-violet-950/20 to-purple-950/20" onClick={onOpenModal}>
         <div className="absolute inset-0 "></div>
 
         <Image
           src={images[currentImageIndex]}
           alt={`${project.name} - Imagem ${currentImageIndex + 1}`}
           fill
-          className={`object-cover transition-all duration-700  ${isTransitioning ? 'opacity-0' : 'opacity-100'
+          className={`object-contain transition-all duration-700 ${isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           style={{ transition: 'opacity 300ms ease-in-out, transform 700ms ease-out' }}
           priority={index < 2}
@@ -302,6 +297,14 @@ const ProjectModal = ({ project, onClose }) => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const images = project.images || [project.image]; // Fallback para compatibilidade
 
+  // Bloquear scroll do body quando modal está aberto
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
   const changeImage = (newIndex) => {
     if (isTransitioning) return;
     setIsTransitioning(true);
@@ -323,9 +326,19 @@ const ProjectModal = ({ project, onClose }) => {
     changeImage(newIndex);
   };
 
+  // Fechar modal ao clicar no backdrop
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 md:p-4 bg-black/80 backdrop-blur-sm animate-fadeIn">
-      <div className="relative w-full max-w-5xl max-h-[95vh] md:max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#1a1443] to-[#0d1224] rounded-lg md:rounded-[5px] border border-violet-500/20 shadow-2xl shadow-violet-500/20">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-2 md:p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
+      onClick={handleBackdropClick}
+    >
+      <div className="relative w-full max-w-5xl max-h-[95vh] md:max-h-[90vh] overflow-y-auto bg-gradient-to-br from-[#1a1443] to-[#0d1224] rounded-lg md:rounded-[5px] border border-violet-500/20 shadow-2xl shadow-violet-500/20 scrollbar-thin scrollbar-thumb-violet-500/50 scrollbar-track-transparent">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -335,14 +348,14 @@ const ProjectModal = ({ project, onClose }) => {
         </button>
 
         {/* Header Image Carousel */}
-        <div className="relative h-[250px] sm:h-[300px] md:h-[400px] overflow-hidden rounded-t-lg md:rounded-t-[5px] group/carousel">
+        <div className="relative w-full aspect-video overflow-hidden rounded-t-lg md:rounded-t-[5px] group/carousel bg-gradient-to-br from-violet-950/20 to-purple-950/20">
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d1224] via-transparent to-transparent z-10"></div>
 
           <Image
             src={images[currentImageIndex]}
             alt={`${project.name} - Imagem ${currentImageIndex + 1}`}
             fill
-            className={`object-cover ${isTransitioning ? 'opacity-0' : 'opacity-100'
+            className={`object-contain ${isTransitioning ? 'opacity-0' : 'opacity-100'
               }`}
             style={{ transition: 'opacity 300ms ease-in-out' }}
           />
@@ -474,7 +487,9 @@ const ProjectModal = ({ project, onClose }) => {
             </a>
 
             <a
-              href="/#contact"
+              href={project.whatsappMsgLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 lg:py-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg md:rounded-xl text-white font-bold text-sm md:text-base lg:text-lg transition-all duration-300 backdrop-blur-sm"
             >
               <span>Iniciar Projeto Semelhante</span>
